@@ -1,0 +1,1 @@
+Every film, every game, every video lives or dies on sound. Studios pay thousands for sound-effect libraries, and they still sound like everyone else's. What if your sound studio lived in your browser, and learned your taste? This is FoleyForge.

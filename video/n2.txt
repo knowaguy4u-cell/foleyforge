@@ -1,0 +1,1 @@
+I type a scene: massive thunder cracking over a neon city in the rain, and hit forge. The keyword engine parses it into layers, impact, city ambience, rain. Three variants synthesize live. Procedural Web Audio. Zero samples. Zero API calls. Real waveforms, real audio, downloadable as WAV files.

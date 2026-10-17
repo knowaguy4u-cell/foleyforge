@@ -1,0 +1,1 @@
+Three stages. Parse: keywords map to synthesis parameters. Synthesize: filtered noise, FM synthesis, pitch envelopes, rendered through Offline Audio Context. Learn: every rating moves an exponential moving average per category. One hundred percent client side. No server. No cost. Works offline.
