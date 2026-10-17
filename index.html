@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoleyForge — The SFX Studio That Learns Your Taste</title>
+<meta name="description" content="Describe a scene. FoleyForge synthesizes layered sound effects in your browser — and learns your taste with every rating. Built for SEPHacks 2026.">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="bg-grid"></div>
+<header class="topbar">
+  <div class="logo"><span class="logo-mark">◉</span> FOLEY<span class="accent">FORGE</span></div>
+  <div class="topbar-right">
+    <div class="stat-pill"><span class="stat-label">generations</span><span class="stat-val" id="statGens">0</span></div>
+    <div class="stat-pill"><span class="stat-label">taste learned</span><span class="stat-val" id="statTaste">0%</span></div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Describe a scene.<br><span class="accent">Hear it built.</span></h1>
+    <p class="sub">FoleyForge synthesizes cinematic sound effects from plain words — impacts, risers, whooshes, ambiences, foley — entirely in your browser. Rate what you hear, and the studio <em>learns your taste</em>, evolving every future generation toward your sound.</p>
+    <div class="prompt-row">
+      <input id="promptInput" type="text" maxlength="140" placeholder='Try: "massive thunder cracking over a neon city in the rain"' autocomplete="off">
+      <button id="forgeBtn" class="btn-primary">⚒ FORGE</button>
+    </div>
+    <div class="seeds">
+      <span>seed scenes:</span>
+      <button class="seed" data-p="massive thunder cracking over a neon city in the rain">⛈ storm city</button>
+      <button class="seed" data-p="soft footsteps on wooden floor in an empty hall">👣 empty hall</button>
+      <button class="seed" data-p="spaceship whoosh blasting past with a deep rumble">🚀 flyby</button>
+      <button class="seed" data-p="gentle forest ambience with distant birds at dawn">🌲 dawn forest</button>
+    </div>
+  </section>
+
+  <section id="results" class="results hidden">
+    <div class="results-head">
+      <h2 id="sceneTitle">Scene</h2>
+      <div class="parsed-tags" id="parsedTags"></div>
+    </div>
+    <div class="variant-grid" id="variantGrid"></div>
+  </section>
+
+  <section class="taste-panel">
+    <h2>🧠 The learning engine</h2>
+    <p>Every rating you give shifts your <strong>taste vector</strong> — the studio's model of what you like. New generations sample near your taste, so the forge literally evolves with you. This is continual learning: no model weights, no cloud, just your feedback loop.</p>
+    <div class="taste-bars" id="tasteBars"></div>
+    <div class="taste-actions">
+      <button id="resetTaste" class="btn-ghost">reset taste profile</button>
+    </div>
+  </section>
+
+  <section class="how">
+    <h2>How it works</h2>
+    <div class="how-grid">
+      <div class="how-card"><div class="how-num">01</div><h3>Parse</h3><p>A keyword engine maps your words to sound categories and synthesis parameters — no prompt leaves without a sonic interpretation.</p></div>
+      <div class="how-card"><div class="how-num">02</div><h3>Synthesize</h3><p>Procedural Web Audio synthesis — filtered noise, FM, pitch envelopes, convolution-free reverb tails. Zero samples, zero API calls, infinite variation.</p></div>
+      <div class="how-card"><div class="how-num">03</div><h3>Learn</h3><p>Your ratings re-weight the parameter space. Variants drift toward your taste over time — the studio that plays back your preferences.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>FOLEYFORGE · built within the SEPHacks 2026 timeframe · solo build by TMT Productions · $0 spent, 100% client-side</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
